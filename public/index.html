@@ -10,7 +10,7 @@
       content="Cat Picture App"
     />
     <!-- For local ios app, haven't implemented -->
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" /> 
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!-- For image format -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <title>Cat Picture App</title>
@@ -18,6 +18,28 @@
   <body>
     <!-- If JS not enabled in browser -->
     <noscript>You need to enable JavaScript to run this app.</noscript>
+    
+    <!-- Modal Container for Fullscreen Image -->
+    <div id="imageModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="modalImage" />
+      <div id="caption"></div>
+    </div>
+
+    <!-- Gallery Section -->
+    <div class="favorites-section">
+      <div class="favorites-grid">
+        <!-- Dynamic images will be added here -->
+      </div>
+      <!-- Gallery Full Message -->
+      <div id="gallery-full-message" class="gallery-full-message" style="display: none;">
+        You have reached the maximum number of images. Please delete one to add more.
+      </div>
+    </div>
+
+    <!-- Root div for React -->
     <div id="root"></div>
+
+    <!-- Include your JavaScript file here if needed -->
   </body>
 </html>
