@@ -9,7 +9,7 @@ function App() {
   const [history, setHistory] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(-1);
   const [favorites, setFavorites] = useState([]);
-  // TODO
+  // for image enlarge in gallery section
   const [modalImage, setModalImage] = useState('');
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -89,24 +89,19 @@ function App() {
   const removeFromFavorites = (url) => {
     setFavorites(favorites.filter(fav => fav !== url));
   };
-  //
+
+  // for correctly on click
   const openModal = (imageUrl) => {
-
     setModalImage(imageUrl);
-
-    setIsModalOpen(true);  // Ensure modal opens correctly
-
+    setIsModalOpen(true);  
   };
 
 
   const closeModal = () => {
-
     setIsModalOpen(false);
-
     setModalImage('');
-
   };
-  //
+  
   return (
     <div className="App">
       <header className="App-header">
@@ -187,18 +182,13 @@ function App() {
       <footer className="App-footer">
         <p>If both previous and next is gray, click to generate one more image</p>
       </footer>
+      
        {/* Modal for displaying full-size cat image */}
-
        {isModalOpen && (
-
         <div id="imageModal" className={`modal ${isModalOpen ? 'open' : ''}`}>
-
           <span className="close" onClick={closeModal}>&times;</span>
-
           <img className="modal-content" src={modalImage} alt="Full-size cat" />
-
         </div>
-
         )}
     </div>
   );

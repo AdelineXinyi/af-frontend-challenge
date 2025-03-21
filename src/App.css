@@ -26,6 +26,7 @@
   justify-content: center;
 }
 
+/* Show the button and fetched image */
 .control-panel {
   display: flex;
   flex-direction: column;
@@ -34,16 +35,19 @@
   max-width: 600px;
 }
 
+/* For previous and next button */
 .history-navigation {
   display: flex;
   justify-content: space-between;
   margin-top: 10px;
 }
 
+/* Gallery section */
 .favorites-section {
   width: 100%;
 }
 
+/* 4 grids each row */
 .favorites-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
@@ -51,6 +55,7 @@
   margin-top: 10px;
 }
 
+/* Each saved image wrapped in the container */
 .favorite-item {
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -64,6 +69,7 @@
   cursor: pointer; 
 }
 
+/* Saved Image */
 .favorite-image {
   width: 100%; 
   height: 100%; 
@@ -79,6 +85,7 @@
   transform: scale(1.05); 
 }
 
+/* Remove image from the gallery */
 .remove-button {
   background-color: #f44336;
   border: none;
@@ -98,6 +105,7 @@
   background-color: #d32f2f;
 }
 
+/* Fetched image frame */
 .image-container {
   width: 100%;
   max-width: 600px;
@@ -117,6 +125,7 @@
   object-fit: cover; 
 }
 
+/* When no fetched */
 .placeholder {
   display: flex;
   justify-content: center;
@@ -297,9 +306,9 @@
   }
 }
 
-/* Modal styles */
+/* For image enlarge in gallery */
 .modal {
-  display: none; /* Hidden by default */
+  display: none; 
   justify-content: center;
   align-items: center;
   position: fixed;
@@ -312,7 +321,7 @@
 }
 
 .modal.open {
-  display: flex; /* Show the modal when it's open */
+  display: flex; 
 }
 
 .modal-content {
